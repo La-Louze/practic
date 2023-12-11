@@ -1,0 +1,163 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    background-color: #1F1D2B;
+    color: white;
+    font-family: Poppins;
+}
+
+.page{
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 30px;
+    margin-top: 30px;
+    
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 160px 940px;
+    column-gap: 100px;
+}
+
+.sidebar{
+    width: 160px;
+    display: grid;
+    grid-template-rows: 1fr 720px 1fr;
+    row-gap: 30px;
+}
+
+.sidebar__header{
+    font-size: 1.5rem;
+}
+
+.sidebar__list{
+    display: grid;
+    grid-template-rows: 340px 340px;
+    row-gap: 40px;
+}
+
+.list{
+    display: grid;
+    grid-template-rows: 20px 300px 20px;
+    
+}
+
+.list__header{
+    color: #808191;
+    font-size: 0.8rem;
+}
+
+.list__bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    color: #808191;
+}
+
+.list__square{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+dd{
+    height: 16px;
+}
+
+.bottom__square{
+    width: 32px;
+    height: 32px;
+    background-color: #808191;
+    border-radius: 12px;
+}
+
+.highlight{
+    background-color:#FF7551 ;
+}
+
+.bottom_highlight{
+    color: white;
+}
+
+.list__line{
+    width: 20px;
+    border-color: #808191 20px;
+}
+
+.sidebar__bottom{
+    display: flex;
+    flex-direction: column;
+}
+
+:root {
+    --light: #6C5ECF;
+    --dark:#FFFF;
+    --link: #FFFF;
+    --link-hover: #FFFF;
+}
+.toggle-switch {
+    position: relative;
+    width: 51px;
+}
+  
+label {
+    position: absolute;
+    width: 100%;
+    height: 31px;
+    background-color: var(--light);
+    border-radius: 40px;
+    cursor: pointer;
+}
+  
+input {
+    position: absolute;
+    display: none;
+}
+  
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+  
+input:checked ~ .slider {
+    background-color: var(--light);
+}
+  
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--dark);
+    transition: 0.3s;
+}
+  
+input:checked ~ .slider::before {
+    transform: translateX(20px);
+    background-color: var(--dark);
+    box-shadow: none;
+}
+  
