@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
 }
 
 html{
@@ -17,10 +20,8 @@ body{
 .page{
     width: 100%;
     max-width: 1200px;
-    margin-inline: auto;
-    padding-inline: 30px;
+    margin-inline: 20px;
     margin-top: 30px;
-    
 }
 
 .content{
@@ -34,10 +35,11 @@ body{
     display: grid;
     grid-template-rows: 1fr 720px 1fr;
     row-gap: 30px;
+    font-weight: 600;
 }
 
 .sidebar__header{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .sidebar__list{
@@ -49,7 +51,7 @@ body{
 .list{
     display: grid;
     grid-template-rows: 20px 300px 20px;
-    
+    align-items: center;
 }
 
 .list__header{
@@ -69,6 +71,7 @@ body{
     flex-direction: column;
     gap: 44px;
     color: #808191;
+    font-weight: 400;
 }
 
 .list__square{
@@ -79,13 +82,17 @@ body{
 
 dd{
     height: 16px;
+    font-weight: 400;
 }
 
 .bottom__square{
     width: 32px;
     height: 32px;
-    background-color: #808191;
+    background-color: #363346;
     border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .highlight{
@@ -94,6 +101,7 @@ dd{
 
 .bottom_highlight{
     color: white;
+    font-weight: 600;
 }
 
 .list__line{
@@ -101,6 +109,11 @@ dd{
     border-color: #808191 20px;
 }
 
+.sidebar__bottom{
+    height: 31px;
+    display: flex;
+    column-gap: 20px;
+}
 
 :root {
     --light: #6C5ECF;
@@ -156,4 +169,56 @@ input:checked ~ .slider::before {
     background-color: var(--dark);
     box-shadow: none;
 }
-  
+
+.bottom__text{
+    font-weight: 400;
+    color: #808191;
+    height: 14px;
+}
+
+.bottom__line{
+    color: #808191;
+}
+
+.mainContent{
+    display: grid;
+    grid-template-rows: 40px auto;
+    column-gap: 40px;
+}
+
+header{
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header__search{
+    background-color: #363346;
+    border-radius: 10px;
+    width: 62%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header__profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 11px;
+}
+
+.header__face{
+    border-radius: 50%;
+}
+
+.profile__name{
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
