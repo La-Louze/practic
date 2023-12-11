@@ -101,10 +101,6 @@ dd{
     border-color: #808191 20px;
 }
 
-.sidebar__bottom{
-    display: flex;
-    flex-direction: column;
-}
 
 :root {
     --light: #6C5ECF;
