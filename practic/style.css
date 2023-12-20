@@ -12,39 +12,36 @@ html{
 }
 
 body{
-    background-color: #1F1D2B;
+    background-color: var(--page);
 }
 
-p{
-    font-family: Poppins;
-    color: #808191;
-    font-weight: 400;
-}
 
 .page{
     width: 100%;
-    max-width: 1440px;
+    max-width: 1360px;
     margin-inline: 20px;
     margin-top: 30px;
+    font-family: Poppins;
+    color: var(--noHighligh);
+    font-weight: 400;
+}
+
+.text_title{
+    color: var(--highlight);
+    font-weight: 600;
 }
 
 .content{
     display: grid;
-    grid-template-columns: 160px 1180px;
+    grid-template-columns: 160px 1100px;
     column-gap: 100px;
 }
 
 .sidebar{
     width: 160px;
     display: grid;
-    grid-template-rows: 1fr 720px 1fr;
+    grid-template-rows: 40px 720px 1fr;
     row-gap: 30px;
-    font-weight: 600;
-}
-
-.text_title{
-    color: white;
-    font-weight: 600;
 }
 
 .sidebar__header{
@@ -64,16 +61,14 @@ p{
 }
 
 .list__header{
-    color: #808191;
     font-size: 0.8rem;
+    font-weight: 600;
 }
 
 .bottom{
     display: flex;
     flex-direction: column;
     gap: 32px;
-    color: #808191;
-    font-weight: 400;
 }
 
 .list__square{
@@ -84,13 +79,12 @@ p{
 
 li{
     height: 32px;
-    font-weight: 400;
 }
 
 .square{
     width: 32px;
     height: 32px;
-    background-color: #363346;
+    background-color: var(--background);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -99,12 +93,11 @@ li{
 }
 
 .highlight{
-    background-color:#FF7551 ;
+    background-color: var(--orange);
 }
 
 
 .bottom_square{
-    font-weight: 600;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -113,21 +106,16 @@ li{
 
 .list__line{
     width: 20px;
-    border-color: #808191 20px;
+    border-color: var(--noHighligh) 20px;
 }
 
 .sidebar__bottom{
     height: 31px;
-    display: flex;
-    gap: 20px;
+    position: relative;
+    /* display: flex;
+    gap: 20px; */
 }
 
-:root {
-    --light: #6C5ECF;
-    --dark:#FFFF;
-    --link: #FFFF;
-    --link-hover: #FFFF;
-}
 .toggle-switch {
     position: relative;
     width: 51px;
@@ -167,24 +155,25 @@ input:checked ~ .slider {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: var(--dark);
+    background-color: var(--highlight);
     transition: 0.3s;
 }
   
 input:checked ~ .slider::before {
     transform: translateX(20px);
-    background-color: var(--dark);
+    background-color: var(--highlight);
     box-shadow: none;
 }
 
 .bottom__text{
-    font-weight: 400;
-    color: #808191;
     height: 14px;
+    position: absolute;
+    right: 0;
+    top: 13%;
 }
 
 .bottom__line{
-    color: #808191;
+    color: var(--noHighligh);
 }
 
 .mainContent{
@@ -201,7 +190,7 @@ header{
 }
 
 .header__search{
-    background-color: #363346;
+    background-color: var(--background);
     border-radius: 10px;
     width: 62%;
     height: 100%;
@@ -209,8 +198,8 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .header__profile{
@@ -236,7 +225,7 @@ header{
 
 .imgContent{
     display: grid;
-    grid-template-rows: 40px 796px;
+    grid-template-rows: 40px auto;
     row-gap: 28px;
     align-items: center;
 }
@@ -254,7 +243,10 @@ header{
 
 .card_upper{
     display: flex;
+    column-gap: 27px;
 }
+
+/*  blue card */
 
 .card_big{
     width: 725px;
@@ -262,9 +254,31 @@ header{
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
+}
+
+.card__minutes{
+    width: 46px;
+    height: 20px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.rectangle__minutes{
+    position: relative;
+}
+
+.minSev{
+    position: absolute;
+    top: 8%;
+    left: 15%;
+    font-size: 0.8rem;
+    font-weight: 400;
 }
 
 .cardImage{
+    aspect-ratio: 3/1;
     position: absolute;
     right: 0;
 }
@@ -272,7 +286,7 @@ header{
 .rectangle{
     width: 265px;
     height: 393px;
-    background: linear-gradient(90deg, #0DAABC 66.47%, rgba(13, 170, 188, 0.00) 100%);
+    background: linear-gradient(90deg, hsl(186, 87%, 39%) 66.47%, rgba(13, 170, 188, 0.00) 100%);
     position: absolute;
 }
 
@@ -281,15 +295,221 @@ header{
     left: 40px;
     display: flex;
     flex-direction: column;
+    gap: 27px;
     width: 231px;
-    height: 144px;
     position: absolute;
     font-size: 2.2rem;
+    line-height: 120%;
+}
+
+.face_border{
+    width: 60px;
+    height: 60px;
+    border: solid white 1px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .face{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #1F1D2B;
+    overflow: hidden;
+    position: relative;
+}
+
+.face_img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    object-fit: cover;
+}
+
+
+
+.text__face{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.text_small{
+    color: var(--highlight);
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 160%;
+}
+
+.small{
+    font-size: 0.9rem;
+    line-height: 160%;
+}
+
+.border__check{
+    position: absolute;
+    bottom: 1px;
+    right: 0;
+}
+
+
+/* оранжевая карта */
+
+.card_small{
+    background-color: var(--orange);
+    width: 352px;
+    height: 366px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.text_orange{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+
+/*  */
+
+.cardLower_content{
+    display: grid;
+    grid-template-rows: 28px auto;
+    row-gap: 27px;
+}
+
+.cardLower__header{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    color: var(--highlight);
+}
+
+/* нижние карты */
+
+.card_lower{
+    display: grid;
+    grid-template-columns: 259px 259px 259px 259px;
+    column-gap: 21px;
+}
+
+.card_man{
+    height: 313px;
+    background-color: var(--dark);
+    border-radius: 8%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+/* фото на фон */
+
+.card__bacground{
+    object-fit: cover;
+    height: 50%;
+    overflow: hidden;
+    background-color: var(--orange);
+}
+
+.bacground__image{
+    object-fit: cover;
+    width: 100%;
+}
+/* кнопка с минутами для нижних */
+.lower__minutes{
+    width: 46px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* аватарка для нижних */
+
+.lower__face{
+    position: absolute;
+    right: 20px;
+    bottom: 116px;
+}
+
+/* инфа нижние */
+
+.lower__text{
+    height: 109px;
+    width: 211px;
+    margin-left: 20px;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    line-height: 162%;
+}
+
+.lower__name{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* color: hsl(24, 44%, 78%); */
+}
+
+:root {
+    --light: #6C5ECF;
+    --highlight: white;
+    --page:hsl(249, 19%, 14%);
+    --dark:hsl(225, 14%, 16%);
+    --noHighligh: hsl(236, 7%, 54%);
+    --orange: hsl(12, 100%, 66%);
+    --background:hsl(249, 16%, 24%);
+}
+
+@media screen and (max-width:1000px) {
+
+    .page{
+        width: 1000px;
+        margin: 20px;
+    }
+
+    .mainContent{
+        width: 740px;
+    }
+
+    .card_upper{
+        gap: 10px;
+    }
+
+    .card_lower{
+        column-gap: 13px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .content{
+        gap: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 750px) {
+
+    .card_big{
+        width: 388px;
+    }
+
+    .rectangle{
+        width: 150%;
+    }
+
+    
+}
+
+@media screen and (max-width: 600px) {
+
+    .sidebar{display: none}
+    
 }
